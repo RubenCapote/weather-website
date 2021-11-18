@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hello!</title>
+    <link rel="icon" href="/img/weather.png"></link>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather</p>
+
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+        
+        <p id="msg1"></p>
+        <p id="msg2"></p>
+
+
+    </div>
+
+    {{>footer}}
+
+    <!-- hay que ponerlo al final del todo para que no de error en el js -->
+    <script src="/js/app.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,66 @@
+body{
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    /* normalmente de fabrica viene de izquierda a derecha asi que lo cambiamos*/
+    flex-direction: column;
+    /*viewport height*/
+    min-height: 100vh;
+}
+
+.main-content{
+    /*to take all leftover space so footer at the bottom*/
+    flex-grow: 1;
+}
+
+footer{
+    color: #888888;
+    /*grosor, estilo y color*/
+    border-top: 1px solid #eeeeee;
+    /*outside the box we use margin*/
+    margin-top: 16px;
+    /*inside the box we use padding*/
+    padding: 16px 0;
+}
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px; 
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* asi solo modificamos los links que hay en header*/
+header a{
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+/*aqui solo aplicamos este estilo a una clase, que ha sido indicada en el html*/
+.portrait{
+    width: 250px;
+}
+
+input{
+    border: 1px solid #cccccc;
+    padding: 7px;
+
+
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 7px;
+
+}
+
