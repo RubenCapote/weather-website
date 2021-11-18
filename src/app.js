@@ -12,6 +12,11 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+//env stands for environmental variables. esto es necesario para obtener
+//el puerto en el que heroku está ejecutando nuestra app
+//si falla heroku, metemos puerto 3000 para que siga funcionando localmente
+const port = process.env.PORT || 3000
+
 //para coger la ruta del directorio donde estamos
 //console.log(__dirname)
 //usando path, podemos editar el directorio para ir a donde queremos
@@ -234,7 +239,8 @@ app.get('*', (req, res) =>{
 //app.com/about
 
 
-//aqui siempre iniciamos el server en un port usando listen
-app.listen(3000, () =>{
-    console.log('Server is up on port 3000')
+//aqui siempre iniciamos el server en un port usando listen. el puerto puede ser
+//o bien el asignado por heroku o bien el 3000 si no hay heroku y se inicia local
+app.listen(port, () =>{
+    console.log('Server is up on port '+port)
 })
